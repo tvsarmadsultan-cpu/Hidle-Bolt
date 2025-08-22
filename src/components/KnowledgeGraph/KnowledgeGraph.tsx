@@ -11,6 +11,8 @@
 @@ .. @@
          {/* Empty State */}
          {filteredNodes.length === 0 && (
+)
+}
 -          <div className="absolute inset-0 flex items-center justify-center">
 +          <div className="absolute inset-0 flex items-center justify-center h-full">
              <div className="text-center">

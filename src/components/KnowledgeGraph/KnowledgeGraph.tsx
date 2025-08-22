@@ -1,9 +1,9 @@
 @@ .. @@
        {/* Graph Container */}
--      <div className="flex-1 relative bg-gradient-to-br from-blue-50 to-purple-50 overflow-hidden">
+      <div className="flex-1 relative bg-gradient-to-br from-blue-50 to-purple-50 overflow-auto" style={{ minHeight: '600px' }}>
 +      <div className="flex-1 relative bg-gradient-to-br from-blue-50 to-purple-50 overflow-auto">
          {/* Connection Lines */}
--        <svg className="absolute inset-0 w-full h-full pointer-events-none">
+        <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{ minHeight: '600px' }}>
 +        <svg className="absolute inset-0 w-full h-[800px] pointer-events-none">
            {getConnectionLines()}
          </svg>

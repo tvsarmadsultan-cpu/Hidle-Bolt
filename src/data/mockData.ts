@@ -1,7 +1,7 @@
 import { ConceptNode, LearningContent, StudentProgress } from '../types/curriculum';
 
 export const conceptNodes: ConceptNode[] = [
-  // Subject level (large nodes) - Top row
+  // Subject level (large nodes) - Left column with better spacing
   {
     id: 'math',
     name: 'Mathematics',
@@ -10,9 +10,9 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-blue-500',
     darkColor: '#1e40af',
     size: 'large',
-    position: { x: 150, y: 80 },
+    position: { x: 120, y: 60 },
     type: 'subject',
-    children: ['algebra', 'geometry', 'calculus', 'statistics'],
+    children: ['algebra', 'geometry', 'calculus'],
     progress: 68,
     status: 'progressing'
   },
@@ -24,7 +24,7 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-500',
     darkColor: '#166534',
     size: 'large',
-    position: { x: 150, y: 200 },
+    position: { x: 120, y: 180 },
     type: 'subject',
     children: ['physics', 'chemistry', 'biology'],
     progress: 45,
@@ -38,28 +38,28 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-purple-500',
     darkColor: '#7c2d12',
     size: 'large',
-    position: { x: 150, y: 320 },
+    position: { x: 120, y: 300 },
     type: 'subject',
-    children: ['grammar', 'literature', 'writing'],
+    children: ['grammar', 'literature'],
     progress: 72,
     status: 'progressing'
   },
   {
-    id: 'history',
-    name: 'History',
-    shortName: 'History',
-    description: 'Learn about past events and their impact on the present',
-    color: 'bg-amber-500',
-    darkColor: '#92400e',
+    id: 'social-studies',
+    name: 'Social Studies',
+    shortName: 'Social',
+    description: 'Understand society, culture, and human interactions',
+    color: 'bg-orange-500',
+    darkColor: '#ea580c',
     size: 'large',
-    position: { x: 150, y: 440 },
+    position: { x: 120, y: 420 },
     type: 'subject',
-    children: ['world-history', 'singapore-history'],
-    progress: 38,
+    children: ['geography', 'history'],
+    progress: 52,
     status: 'started'
   },
 
-  // Math topics (medium nodes) - Second column
+  // Math topics (medium nodes) - Second column with proper spacing
   {
     id: 'algebra',
     name: 'Algebra',
@@ -68,10 +68,10 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-blue-400',
     darkColor: '#2563eb',
     size: 'medium',
-    position: { x: 320, y: 40 },
+    position: { x: 280, y: 30 },
     type: 'topic',
     parent: 'math',
-    children: ['linear-eq', 'quadratic-eq', 'polynomials'],
+    children: ['linear-eq', 'quadratic-eq'],
     progress: 85,
     status: 'mastered'
   },
@@ -83,10 +83,10 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-blue-400',
     darkColor: '#2563eb',
     size: 'medium',
-    position: { x: 320, y: 100 },
+    position: { x: 280, y: 80 },
     type: 'topic',
     parent: 'math',
-    children: ['triangles', 'circles', 'coordinate-geometry'],
+    children: ['triangles', 'circles'],
     progress: 62,
     status: 'progressing'
   },
@@ -98,30 +98,15 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-blue-400',
     darkColor: '#2563eb',
     size: 'medium',
-    position: { x: 320, y: 160 },
+    position: { x: 280, y: 130 },
     type: 'topic',
     parent: 'math',
-    children: ['limits', 'derivatives', 'integrals'],
+    children: ['limits', 'derivatives'],
     progress: 24,
     status: 'started'
   },
-  {
-    id: 'statistics',
-    name: 'Statistics',
-    shortName: 'Stats',
-    description: 'Analyze data and understand probability',
-    color: 'bg-blue-400',
-    darkColor: '#2563eb',
-    size: 'medium',
-    position: { x: 320, y: 220 },
-    type: 'topic',
-    parent: 'math',
-    children: ['probability', 'data-analysis'],
-    progress: 41,
-    status: 'progressing'
-  },
 
-  // Science topics (medium nodes)
+  // Science topics (medium nodes) - Better spacing
   {
     id: 'physics',
     name: 'Physics',
@@ -130,10 +115,10 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-400',
     darkColor: '#16a34a',
     size: 'medium',
-    position: { x: 320, y: 280 },
+    position: { x: 280, y: 200 },
     type: 'topic',
     parent: 'science',
-    children: ['mechanics', 'waves', 'electricity'],
+    children: ['mechanics', 'waves'],
     progress: 58,
     status: 'progressing'
   },
@@ -145,10 +130,10 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-400',
     darkColor: '#16a34a',
     size: 'medium',
-    position: { x: 320, y: 340 },
+    position: { x: 280, y: 250 },
     type: 'topic',
     parent: 'science',
-    children: ['atomic-structure', 'chemical-bonding', 'reactions'],
+    children: ['atomic-structure', 'chemical-bonding'],
     progress: 41,
     status: 'progressing'
   },
@@ -160,15 +145,15 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-400',
     darkColor: '#16a34a',
     size: 'medium',
-    position: { x: 320, y: 400 },
+    position: { x: 280, y: 300 },
     type: 'topic',
     parent: 'science',
-    children: ['cell-biology', 'genetics', 'ecology'],
+    children: ['cell-biology', 'genetics'],
     progress: 33,
     status: 'started'
   },
 
-  // English topics (medium nodes)
+  // English topics (medium nodes) - Better spacing
   {
     id: 'grammar',
     name: 'Grammar',
@@ -177,10 +162,10 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-purple-400',
     darkColor: '#7c3aed',
     size: 'medium',
-    position: { x: 320, y: 460 },
+    position: { x: 280, y: 350 },
     type: 'topic',
     parent: 'english',
-    children: ['parts-of-speech', 'sentence-structure'],
+    children: ['parts-of-speech'],
     progress: 78,
     status: 'progressing'
   },
@@ -192,62 +177,45 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-purple-400',
     darkColor: '#7c3aed',
     size: 'medium',
-    position: { x: 320, y: 520 },
+    position: { x: 280, y: 400 },
     type: 'topic',
     parent: 'english',
-    children: ['poetry', 'prose', 'drama'],
+    children: ['poetry', 'prose'],
     progress: 55,
     status: 'progressing'
   },
-  {
-    id: 'writing',
-    name: 'Writing',
-    shortName: 'Writing',
-    description: 'Develop effective communication skills',
-    color: 'bg-purple-400',
-    darkColor: '#7c3aed',
-    size: 'medium',
-    position: { x: 320, y: 580 },
-    type: 'topic',
-    parent: 'english',
-    children: ['essays', 'creative-writing'],
-    progress: 67,
-    status: 'progressing'
-  },
 
-  // History topics (medium nodes)
+  // Social Studies topics (medium nodes) - Better spacing
   {
-    id: 'world-history',
-    name: 'World History',
-    shortName: 'World Hist',
-    description: 'Explore major events in global history',
-    color: 'bg-amber-400',
-    darkColor: '#d97706',
+    id: 'geography',
+    name: 'Geography',
+    shortName: 'Geography',
+    description: 'Study Earth\'s features and human interactions',
+    color: 'bg-orange-400',
+    darkColor: '#f97316',
     size: 'medium',
-    position: { x: 320, y: 640 },
+    position: { x: 280, y: 450 },
     type: 'topic',
-    parent: 'history',
-    children: ['ancient-civilizations', 'modern-history'],
-    progress: 42,
+    parent: 'social-studies',
+    progress: 48,
     status: 'started'
   },
   {
-    id: 'singapore-history',
-    name: 'Singapore History',
-    shortName: 'SG History',
-    description: 'Learn about Singapore\'s development and heritage',
-    color: 'bg-amber-400',
-    darkColor: '#d97706',
+    id: 'history',
+    name: 'History',
+    shortName: 'History',
+    description: 'Learn about past events and their significance',
+    color: 'bg-orange-400',
+    darkColor: '#f97316',
     size: 'medium',
-    position: { x: 320, y: 700 },
+    position: { x: 280, y: 500 },
     type: 'topic',
-    parent: 'history',
-    children: ['colonial-period', 'independence'],
-    progress: 34,
+    parent: 'social-studies',
+    progress: 56,
     status: 'started'
   },
 
-  // Algebra concepts (small nodes) - Third column
+  // Algebra concepts (small nodes) - Third column with proper spacing
   {
     id: 'linear-eq',
     name: 'Linear Equations',
@@ -256,7 +224,7 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-blue-300',
     darkColor: '#3b82f6',
     size: 'small',
-    position: { x: 480, y: 20 },
+    position: { x: 440, y: 10 },
     type: 'concept',
     parent: 'algebra',
     progress: 92,
@@ -270,28 +238,14 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-blue-300',
     darkColor: '#3b82f6',
     size: 'small',
-    position: { x: 480, y: 60 },
+    position: { x: 440, y: 50 },
     type: 'concept',
     parent: 'algebra',
     progress: 67,
     status: 'progressing'
   },
-  {
-    id: 'polynomials',
-    name: 'Polynomials',
-    shortName: 'Polynomials',
-    description: 'Work with expressions with multiple terms',
-    color: 'bg-blue-300',
-    darkColor: '#3b82f6',
-    size: 'small',
-    position: { x: 480, y: 100 },
-    type: 'concept',
-    parent: 'algebra',
-    progress: 45,
-    status: 'started'
-  },
 
-  // Geometry concepts (small nodes)
+  // Geometry concepts (small nodes) - Better spacing
   {
     id: 'triangles',
     name: 'Triangles',
@@ -300,7 +254,7 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-blue-300',
     darkColor: '#3b82f6',
     size: 'small',
-    position: { x: 480, y: 140 },
+    position: { x: 440, y: 90 },
     type: 'concept',
     parent: 'geometry',
     progress: 73,
@@ -314,14 +268,44 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-blue-300',
     darkColor: '#3b82f6',
     size: 'small',
-    position: { x: 480, y: 180 },
+    position: { x: 440, y: 130 },
     type: 'concept',
     parent: 'geometry',
     progress: 51,
     status: 'progressing'
   },
 
-  // Physics concepts (small nodes)
+  // Calculus concepts (small nodes) - Better spacing
+  {
+    id: 'limits',
+    name: 'Limits',
+    shortName: 'Limits',
+    description: 'Understanding limits and continuity',
+    color: 'bg-blue-300',
+    darkColor: '#3b82f6',
+    size: 'small',
+    position: { x: 440, y: 170 },
+    type: 'concept',
+    parent: 'calculus',
+    progress: 18,
+    status: 'started'
+  },
+  {
+    id: 'derivatives',
+    name: 'Derivatives',
+    shortName: 'Derivatives',
+    description: 'Rate of change and differentiation',
+    color: 'bg-blue-300',
+    darkColor: '#3b82f6',
+    size: 'small',
+    position: { x: 440, y: 210 },
+    type: 'concept',
+    parent: 'calculus',
+    progress: 12,
+    status: 'started'
+  },
+
+  // Physics concepts (small nodes) - Better spacing
   {
     id: 'mechanics',
     name: 'Mechanics',
@@ -330,7 +314,7 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-300',
     darkColor: '#22c55e',
     size: 'small',
-    position: { x: 480, y: 260 },
+    position: { x: 440, y: 250 },
     type: 'concept',
     parent: 'physics',
     progress: 64,
@@ -344,28 +328,14 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-300',
     darkColor: '#22c55e',
     size: 'small',
-    position: { x: 480, y: 300 },
+    position: { x: 440, y: 290 },
     type: 'concept',
     parent: 'physics',
     progress: 38,
     status: 'started'
   },
-  {
-    id: 'electricity',
-    name: 'Electricity',
-    shortName: 'Electricity',
-    description: 'Electric circuits and current',
-    color: 'bg-green-300',
-    darkColor: '#22c55e',
-    size: 'small',
-    position: { x: 480, y: 340 },
-    type: 'concept',
-    parent: 'physics',
-    progress: 72,
-    status: 'progressing'
-  },
 
-  // Chemistry concepts (small nodes)
+  // Chemistry concepts (small nodes) - Better spacing
   {
     id: 'atomic-structure',
     name: 'Atomic Structure',
@@ -374,7 +344,7 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-300',
     darkColor: '#22c55e',
     size: 'small',
-    position: { x: 480, y: 380 },
+    position: { x: 440, y: 330 },
     type: 'concept',
     parent: 'chemistry',
     progress: 56,
@@ -388,14 +358,14 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-300',
     darkColor: '#22c55e',
     size: 'small',
-    position: { x: 480, y: 420 },
+    position: { x: 440, y: 370 },
     type: 'concept',
     parent: 'chemistry',
     progress: 29,
     status: 'started'
   },
 
-  // Biology concepts (small nodes)
+  // Biology concepts (small nodes) - Better spacing
   {
     id: 'cell-biology',
     name: 'Cell Biology',
@@ -404,7 +374,7 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-300',
     darkColor: '#22c55e',
     size: 'small',
-    position: { x: 480, y: 460 },
+    position: { x: 440, y: 410 },
     type: 'concept',
     parent: 'biology',
     progress: 41,
@@ -418,14 +388,14 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-green-300',
     darkColor: '#22c55e',
     size: 'small',
-    position: { x: 480, y: 500 },
+    position: { x: 440, y: 450 },
     type: 'concept',
     parent: 'biology',
     progress: 18,
     status: 'started'
   },
 
-  // English concepts (small nodes)
+  // English concepts (small nodes) - Better spacing
   {
     id: 'parts-of-speech',
     name: 'Parts of Speech',
@@ -434,28 +404,14 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-purple-300',
     darkColor: '#a855f7',
     size: 'small',
-    position: { x: 480, y: 540 },
+    position: { x: 440, y: 490 },
     type: 'concept',
     parent: 'grammar',
     progress: 84,
     status: 'mastered'
   },
-  {
-    id: 'sentence-structure',
-    name: 'Sentence Structure',
-    shortName: 'Sentences',
-    description: 'How to build effective sentences',
-    color: 'bg-purple-300',
-    darkColor: '#a855f7',
-    size: 'small',
-    position: { x: 480, y: 580 },
-    type: 'concept',
-    parent: 'grammar',
-    progress: 71,
-    status: 'progressing'
-  },
 
-  // Literature concepts (small nodes)
+  // Literature concepts (small nodes) - Better spacing
   {
     id: 'poetry',
     name: 'Poetry',
@@ -464,7 +420,7 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-purple-300',
     darkColor: '#a855f7',
     size: 'small',
-    position: { x: 480, y: 620 },
+    position: { x: 440, y: 530 },
     type: 'concept',
     parent: 'literature',
     progress: 63,
@@ -478,7 +434,7 @@ export const conceptNodes: ConceptNode[] = [
     color: 'bg-purple-300',
     darkColor: '#a855f7',
     size: 'small',
-    position: { x: 480, y: 660 },
+    position: { x: 440, y: 570 },
     type: 'concept',
     parent: 'literature',
     progress: 47,
